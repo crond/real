@@ -1,0 +1,6 @@
+echo "Comparing read and fread efficiency,by reading a same file..."
+echo ""
+readOut
+echo ""
+echo ""
+freadOut
