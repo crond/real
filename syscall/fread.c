@@ -23,18 +23,18 @@ int main()
     printf(" freadOut:\n");
     gettimeofday(&start,NULL);
     ret = fread(buffer, sizeof(buffer),1,fd);
-//    printf("Buffer: %s \n",buffer);
+    printf("Buffer: %s \n",buffer);
     while(ret > 0){
-//        memset(buffer,0,sizeof(buffer));
+        memset(buffer,0,sizeof(buffer));
         ret = fread(buffer, sizeof(buffer),1,fd);
-  //      printf("Buffer: %s \n",buffer);
+       printf("Buffer: %s \n",buffer);
     }        
     gettimeofday(&end,NULL);
     printf(" Start time: %02d:%02d\n",
                             start.tv_sec,start.tv_usec);
     printf(" End time  : %02d:%02d\n",
                             end.tv_sec,end.tv_usec);
-    printf(" End time  : %02d:%02d\n",
+    printf(" fread Diff time  : %02d:%02d\n",
                             end.tv_sec-start.tv_sec,end.tv_usec-start.tv_usec);
     return 0;
 }

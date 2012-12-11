@@ -1,0 +1,37 @@
+sys call vs lib ,by reading a same file...
+
+Hi
+HEllo
+Bye
+Hi
+HEllo
+Bye
+Hi
+HEllo
+Bye
+Hi
+HEllo
+Bye
+ readOut:
+ Start time: 1355188990:157656
+ End time  : 1355188990:157796
+ read diff time  : 00:140
+
+
+ freadOut:
+Buffer: Hi
+HEllo
+Bye
+Hi
+HEllo
+Bye
+Hi
+HEllo
+Bye
+Hi
+HEllo
+Bye
+ 
+ Start time: 1355188990:171705
+ End time  : 1355188990:171962
+ fread Diff time  : 00:257

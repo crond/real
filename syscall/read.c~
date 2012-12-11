@@ -21,18 +21,18 @@ int main()
     printf(" readOut:\n");
     gettimeofday(&start,NULL);
     ret = read(fd, buffer, sizeof(buffer));
-    printf("BUffer:%s\n",buffer);
+    write(1,buffer,ret);
     while(ret > 0){
-        memset(buffer,0,sizeof(buffer));
+        bzero(buffer,sizeof(buffer));
         ret = read(fd, buffer, sizeof(buffer));
-        printf("BUffer:%s\n",buffer);
+        write(1,buffer,ret);
     }        
     gettimeofday(&end,NULL);
     printf(" Start time: %02d:%02d\n",
                             start.tv_sec,start.tv_usec);
     printf(" End time  : %02d:%02d\n",
                             end.tv_sec,end.tv_usec);
-    printf(" End time  : %02d:%02d\n",
+    printf(" Diff time  : %02d:%02d\n",
                             end.tv_sec-start.tv_sec,end.tv_usec-start.tv_usec);
 
     return 0;

@@ -1,6 +1,10 @@
-echo "Compaing read and fread efficiency,by reading a same file..."
-echo ""
-readOut
-echo ""
-echo ""
-freadOut
+cc read.c -o readOut
+cc fread.c -o freadOut
+rm tmp
+echo "Comparing read and fread efficiency,by reading a same file..." > tmp
+echo "" >> tmp
+readOut >> tmp
+echo "" >> tmp
+echo "" >> tmp
+freadOut >> tmp
+cat tmp | grep diff -i
