@@ -1,0 +1,14 @@
+#bash script to compile all *.c files in a current dir, in one shot
+#generated exe will share the *.c file name with '.out' extension
+
+PWD=`pwd`
+echo Compiling all files in $PWD...
+
+for i in $PWD/*.c
+    do
+        cc $i -o $i.out
+        echo ""
+        echo ""
+        echo Compiled $i
+        sleep 1
+    done    
